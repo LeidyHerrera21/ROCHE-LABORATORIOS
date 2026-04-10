@@ -11,6 +11,8 @@ chatToggle.addEventListener("click", (e) => {
 
 closeChat.addEventListener("click", () => {
     chatbox.classList.add("hidden");
+    
+    document.body.style.cursor = "default";
 });
 
 

@@ -15,6 +15,33 @@
  --card:#1e293b;
 }
 
+ .dark-mode .nav-link, 
+.dark-mode #sideMenu a,
+.dark-mode .navbar-brand,
+.dark-mode .navbar-toggler {
+    color: #ffffff !important;
+}
+
+
+#closeChat, 
+#chatToggle, 
+#sendBtn, 
+#menuBtn,
+.theme-toggle,
+.mini-emotion,
+.btn,
+button {
+    cursor: pointer !important;
+}
+
+.chat-header {
+    cursor: default !important;
+}
+
+.dark-mode .navbar {
+    background-color: var(--card) !important;
+}
+
 /* ================= DARK MODE TOGGLE ================= */
 
 .theme-toggle{
@@ -1329,108 +1356,92 @@ body{
 
 /*Dashboard*/
 
+/* ================= HABITS GRID ================= */
 
-/* GRID */
-.habits-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+.habits-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-/* CARD */
-.habit-card {
-  background: white;
-  padding: 25px;
-  border-radius: 20px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-
-  /* sombra suave */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-
-  /* animación entrada */
-  animation: fadeUp 0.6s ease;
-  transition: transform 0.3s, box-shadow 0.3s;
+/* TARJETAS */
+.habit-card{
+    background:var(--card);
+    padding:20px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    transition:.3s;
 }
 
-/* EFECTO HOVER */
-.habit-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-}
-
-/* EFECTO BRILLO */
-.habit-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
-  transition: 0.5s;
-}
-
-.habit-card:hover::before {
-  left: 100%;
-}
-
-/* TEXTOS CELESTES */
-.habit-card h5 {
-  color: #0d6efd; /* azul fuerte */
-  font-weight: bold;
-}
-
-.habit-card p {
-  color: #5bc0de; /* celeste */
-  font-size: 14px;
-}
-
-/* CONTADOR */
-.habit-card span {
-  display: block;
-  margin-top: 10px;
-  font-size: 20px;
-  color: #0d6efd;
-  font-weight: bold;
+.habit-card:hover{
+    transform:translateY(-5px);
 }
 
 /* BOTÓN */
-.habit-card button {
-  margin-top: 15px;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 25px;
-  background: linear-gradient(135deg, #0d6efd, #5bc0de);
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
+.habit-card button{
+    margin-top:10px;
+    border:none;
+    background:#0066CC;
+    color:white;
+    padding:10px 15px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
 }
 
-/* BOTÓN HOVER */
-.habit-card button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(13,110,253,0.4);
+.habit-card button:hover{
+    background:#004c99;
+    transform:scale(1.05);
+}
+
+/* CONTADOR */
+.habit-card span{
+    display:block;
+    margin-top:10px;
+    font-weight:bold;
+    font-size:18px;
+    color:#0066CC;
 }
 
 /* CAJA DE ESTRÉS */
-.stress-box {
-  background: white;
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  animation: fadeUp 0.8s ease;
+.stress-box{
+    background:var(--card);
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
 
-.stress-box h5 {
-  color: #0d6efd;
+/* ================= RESPONSIVE ================= */
+
+/* Tablets */
+@media(max-width:992px){
+    .habits-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 }
 
-#stressNivel {
-  font-size: 24px;
-  font-weight: bold;
-  color: #5bc0de;
+/* Móviles */
+@media(max-width:576px){
+    .habits-grid{
+        grid-template-columns:1fr;
+    }
+
+    .habit-card{
+        padding:18px;
+    }
+
+    .habit-card h5{
+        font-size:16px;
+    }
+
+    .habit-card p{
+        font-size:14px;
+    }
+
+    .habit-card button{
+        width:100%;
+    }
 }
 
 /* ANIMACIÓN */
@@ -1550,3 +1561,235 @@ button:hover {
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
 }
+
+/* BOTÓN UBICACIÓN */
+.location-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#0066CC;
+    color:white;
+    padding:10px 18px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,102,204,.3);
+}
+
+/* hover */
+.location-btn:hover{
+    background:#004c99;
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,102,204,.4);
+}
+
+/* animación pulso */
+.location-btn::after{
+    content:"";
+    width:8px;
+    height:8px;
+    background:#00e0ff;
+    border-radius:50%;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);opacity:1;}
+    100%{transform:scale(2);opacity:0;}
+}
+
+.reclamaciones-link{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 18px;
+    border-radius:25px;
+    background:white;
+    color:#0066CC;
+    font-weight:600;
+    text-decoration:none;
+    transition:.3s;
+}
+
+/* hover elegante */
+.reclamaciones-link:hover{
+    background:#e6f0ff;
+    transform:translateY(-2px);
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+/* ================= MODAL RECLAMACIONES ================= */
+
+.reclamaciones-modal{
+ border-radius:18px;
+ padding:10px;
+ background:var(--card);
+ box-shadow:0 20px 50px rgba(0,0,0,.2);
+ animation:fadeUp .4s ease;
+}
+
+/* inputs */
+.reclamaciones-modal .form-control,
+.reclamaciones-modal .form-select{
+ border-radius:12px;
+ border:1px solid #ddd;
+ transition:.3s;
+}
+
+.reclamaciones-modal .form-control:focus,
+.reclamaciones-modal .form-select:focus{
+ border-color:#0066CC;
+ box-shadow:0 0 10px rgba(0,102,204,.2);
+}
+
+/* botón */
+.btn-send{
+ background:linear-gradient(135deg,#0066CC,#00AEEF);
+ border:none;
+ padding:10px 20px;
+ border-radius:25px;
+ color:white;
+ font-weight:600;
+ cursor:pointer;
+ transition:.3s;
+}
+
+.btn-send:hover{
+ transform:translateY(-2px);
+ box-shadow:0 8px 20px rgba(0,102,204,.3);
+}
+
+/* animación */
+@keyframes fadeUp{
+ from{
+  opacity:0;
+  transform:translateY(30px);
+ }
+ to{
+  opacity:1;
+  transform:translateY(0);
+ }
+}
+
+/* ================= MODAL BASE ================= */
+
+.reclamaciones-modal{
+    border-radius:20px;
+    padding:10px;
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(20px);
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+    animation:modalFade .5s ease;
+    border:1px solid rgba(255,255,255,.3);
+}
+
+/* animación entrada */
+@keyframes modalFade{
+    from{
+        opacity:0;
+        transform:translateY(40px) scale(.95);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+/* HEADER */
+.reclamaciones-modal .modal-title{
+    font-weight:600;
+    color:#0066CC;
+}
+
+/* INPUTS FLOATING PRO */
+.reclamaciones-modal .form-control,
+.reclamaciones-modal .form-select{
+    border-radius:12px;
+    border:1px solid #ddd;
+    transition:.3s;
+    background:rgba(255,255,255,.7);
+}
+
+/* focus elegante */
+.reclamaciones-modal .form-control:focus,
+.reclamaciones-modal .form-select:focus{
+    border-color:#0066CC;
+    box-shadow:0 0 0 3px rgba(0,102,204,.15);
+    background:white;
+}
+
+/* labels */
+.reclamaciones-modal label{
+    color:#666;
+}
+
+/* textarea */
+.reclamaciones-modal textarea{
+    resize:none;
+}
+
+/* BOTÓN ENVIAR */
+.btn-send{
+    background:linear-gradient(135deg,#0066CC,#00AEEF);
+    border:none;
+    padding:10px 20px;
+    border-radius:25px;
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(0,102,204,.3);
+}
+
+/* hover botón */
+.btn-send:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(0,102,204,.4);
+}
+
+/* click */
+.btn-send:active{
+    transform:scale(.95);
+}
+
+/* TEXTO FOOTER */
+.modal-footer small{
+    font-size:12px;
+}
+
+/* ================= DARK MODE ================= */
+
+.dark-mode .reclamaciones-modal{
+    background:rgba(30,41,59,0.9);
+    color:#f1f5f9;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.dark-mode .reclamaciones-modal .form-control,
+.dark-mode .reclamaciones-modal .form-select{
+    background:#1e293b;
+    color:white;
+    border:1px solid #334155;
+}
+
+.dark-mode .reclamaciones-modal label{
+    color:#cbd5f5;
+}
+
+/* ================= SCROLL SUAVE ================= */
+
+.modal-body{
+    max-height:400px;
+    overflow-y:auto;
+}
+
+/* scrollbar moderno */
+.modal-body::-webkit-scrollbar{
+    width:6px;
+}
+
+.modal-body::-webkit-scrollbar-thumb{
+    background:#0066CC;
+    border-radius:10px;
+}
+
