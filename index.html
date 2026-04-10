@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sostenibilidad Humana y Autocuidado | Roche</title>
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="css/styles.css" rel="stylesheet">
@@ -15,53 +16,62 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
 
-<div class="container">
+  <div class="container">
 
-<!-- LOGO -->
-<a class="navbar-brand" href="#">
-    <img src="assets/images/logo.png" alt="Roche Logo" class="logo-roche">
-</a>
+    <!-- LOGO -->
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/logo.png" alt="Roche Logo" class="logo-roche">
+    </a>
 
-<!-- BOTÓN MOBILE -->
-<button class="navbar-toggler" type="button"
-data-bs-toggle="collapse"
-data-bs-target="#navbarMenu">
+    <!-- BOTÓN HAMBURGUESA -->
+    <button class="navbar-toggler custom-toggler" type="button" id="menuBtn">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </button>
 
-<span class="navbar-toggler-icon"></span>
-</button>
+<!-- MENÚ NORMAL (desktop) -->
+    <div class="collapse navbar-collapse justify-content-end desktop-menu">
 
-<!-- MENÚ -->
-<div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+      <ul class="navbar-nav gap-lg-3">
 
-<ul class="navbar-nav gap-lg-3">
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.roche-ccav.com/acerca-de/nuestra-historia">Historia</a>
+        </li>
 
-<li class="nav-item">
-<a class="nav-link nav-hover" href="https://www.roche-ccav.com/acerca-de/nuestra-historia">Historia</a>
-</li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://careers.roche.com/es/es">Carrera</a>
+        </li>
 
-<li class="nav-item">
-<a class="nav-link nav-hover" href="https://careers.roche.com/es/es">Carrera</a>
-</li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.roche.com.pe/acerca-de-roche/negocios">Negocios</a>
+        </li>
 
-<li class="nav-item">
-<a class="nav-link nav-hover" href="https://www.roche.com.pe/acerca-de-roche/negocios">Negocios</a>
-</li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.roche.com.pe/contacto">Contacto</a>
+        </li>
 
-<li class="nav-item">
-<a class="nav-link nav-hover" href="https://www.roche.com.pe/contacto">Contacto</a>
-</li>
+      </ul>
 
-</ul>
+    </div>
 
-</div>
-
-</div>
-
-<button id="darkModeToggle" class="theme-toggle">
-    <span class="icon">🌙</span>
-</button>
-
+  </div>
+    <!-- 🌙 DARK MODE DENTRO DEL MENÚ -->
+      <button id="darkModeToggle" class="theme-toggle ms-lg-3">
+        <span class="icon">🌙</span>
+      </button>
 </nav>
+
+<!-- MENÚ LATERAL -->
+    <div id="sideMenu" class="side-menu">
+      <ul>
+          <li><a href="https://www.roche-ccav.com/acerca-de/nuestra-historia">Historia</a></li>
+          <li><a href="https://careers.roche.com/es/es">Carrera</a></li>
+          <li><a href="https://www.roche.com.pe/acerca-de-roche/negocios">Negocios</a></li>
+          <li><a href="https://www.roche.com.pe/contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
 
 <!-- HERO -->
 <header class="hero text-center">
@@ -382,7 +392,36 @@ Selecciona una emoción
 
 </section>
 
+<section class="container mt-5 game-layout">
 
+  <!-- IZQUIERDA -->
+  <div class="game-left">
+
+    <h3 class="mb-3">Reto Diario</h3>
+
+    <div class="game-card">
+
+      <p id="retoTexto">Haz una pausa y respira 10 segundos</p>
+
+      <button onclick="iniciarReto()">Iniciar</button>
+
+      <div id="timer">10</div>
+
+      <p>Puntos: <span id="puntos">0</span></p>
+      <p>Racha 🔥: <span id="racha">0</span></p>
+
+      <div id="mensajeGame"></div>
+
+    </div>
+
+  </div>
+
+  <!-- DERECHA -->
+  <div class="game-right">
+    <img src="assets/images/salud.jpg" id="gameImage" class="game-img">
+  </div>
+
+</section>
 
 <!-- ================= FORMULARIO ================= -->
 <section class="container mt-5 contact-section">

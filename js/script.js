@@ -168,3 +168,93 @@ function evaluarEstres(){
   document.getElementById("stressNivel").textContent = nivel;
   document.getElementById("recomendacion").textContent = consejo;
 }
+
+let puntos = 0;
+let racha = 0;
+let tiempo = 10;
+let intervalo;
+
+const retos = [
+  {
+    texto: "Respira profundamente 10 segundos",
+    imagen: "/assets/images/respirar.jpg",
+    mensaje: "Respira lentamente..."
+  },
+  {
+    texto: "Estírate y mueve tu cuerpo",
+    imagen: "/assets/images/estiramiento.jpg",
+    mensaje: "Muévete suavemente..."
+  },
+  {
+    texto: "Tómate un momento de calma",
+    imagen: "/assets/images/relajacion.jpg",
+    mensaje: "Relájate y desconéctate..."
+  }
+];
+
+function iniciarReto(){
+
+  clearInterval(intervalo);
+
+ clearInterval(intervalo);
+
+// elegir reto aleatorio
+const retoActual = Math.floor(Math.random() * retos.length);
+
+document.getElementById("retoTexto").textContent = retos[retoActual].texto;
+document.getElementById("gameImage").src = retos[retoActual].imagen;
+
+tiempo = 10;
+document.getElementById("timer").textContent = tiempo;
+document.getElementById("mensajeGame").textContent = retos[retoActual].mensaje;
+
+intervalo = setInterval(() => {
+
+  tiempo--;
+  document.getElementById("timer").textContent = tiempo;
+
+  if (tiempo <= 0) {
+    clearInterval(intervalo);
+    completarReto();
+  }
+
+}, 1000);
+}
+
+function completarReto(){
+
+  puntos += 10;
+  racha++;
+
+  document.getElementById("puntos").textContent = puntos;
+  document.getElementById("racha").textContent = racha;
+
+  const mensaje = document.getElementById("mensajeGame");
+  mensaje.textContent = "¡Bien hecho! Ganaste 10 puntos 💙";
+
+  //  animación texto
+  mensaje.classList.add("animar");
+  setTimeout(()=> mensaje.classList.remove("animar"), 800);
+
+  //  animación imagen
+  const img = document.getElementById("gameImage");
+  img.classList.add("img-success");
+  setTimeout(()=> img.classList.remove("img-success"), 800);
+}
+
+const btn = document.getElementById("menuBtn");
+const menu = document.getElementById("sideMenu");
+const overlay = document.getElementById("overlay");
+
+btn.addEventListener("click", () => {
+  btn.classList.toggle("active");
+  menu.classList.toggle("active");
+  overlay.classList.toggle("active");
+});
+
+// cerrar al tocar fuera
+overlay.addEventListener("click", () => {
+  btn.classList.remove("active");
+  menu.classList.remove("active");
+  overlay.classList.remove("active");
+});
