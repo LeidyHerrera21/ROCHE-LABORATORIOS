@@ -16,7 +16,7 @@ form.addEventListener("submit",(e)=>{
     e.preventDefault();
 
     msg.style.opacity="1";
-    msg.textContent="✅ Mensaje enviado correctamente. Gracias por confiar en nosotros.";
+    msg.textContent="✔ Mensaje enviado correctamente. Gracias por confiar en nosotros.";
 
     form.reset();
     miniEmotions.forEach(b=>b.classList.remove("active"));

@@ -246,6 +246,57 @@ Preguntas Frecuentes sobre Bienestar
 </div>
 </section>
 
+<!-- WHOLE -->
+<div class="ws-grid">
+
+  <!-- CARD 1 -->
+  <div class="ws-card">
+    <img src="assets/images/parenting.jpg" class="ws-img">
+    <div class="ws-overlay">
+      <h5>Parenting</h5>
+      <p>Los servicios de Parenting de Morneau Shepell 
+        (ahora parte de LifeWorks/TELUS Health) 
+        ofrecen apoyo confidencial a través de su Programa de Asistencia al Empleado (PAE). 
+        Incluyen asesoramiento experto, recursos para el cuidado infantil, artículos educativos y 
+        consulta de especialistas 24/7 para mejorar las habilidades de crianza y
+         resolver desafíos familiares.</p>
+    </div>
+  </div>
+
+  <!-- CARD 2 -->
+  <div class="ws-card">
+    <img src="assets/images/finanzas.jpg" class="ws-img">
+    <div class="ws-overlay">
+      <h5>Finanzas</h5>
+      <p>Morneau Shepell, ahora parte de TELUS Health 
+        (anteriormente LifeWorks), 
+        ofrece servicios financieros integrados dentro de sus Programas de Asistencia al Empleado 
+        (PAE). Estos servicios incluyen asesoramiento confidencial sobre gestión financiera, 
+        planificación de jubilación, manejo de deudas
+        y apoyo para problemas financieros complejos, 
+        disponibles 24/7 de forma digital o telefónica.</p>
+    </div>
+  </div>
+
+  <!-- CARD 3 -->
+  <div class="ws-card">
+    <img src="assets/images/abuelos.jpg" class="ws-img">
+    <div class="ws-overlay">
+      <h5>Adultos mayores</h5>
+      <p>Morneau Shepell, ahora parte de LifeWorks, 
+        ofrece servicios de apoyo al empleado (PAE) 
+        que incluyen recursos de cuidado de adultos mayores, 
+        ayudando a localizar opciones de atención, 
+        asesoramiento jurídico y apoyo para el equilibrio vida-trabajo.
+         Sus servicios son confidenciales, disponibles 24/7 y gratuitos para empleados cubiertos.
+        </p>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- COMO TE SIENTES -->
 <section class="container mt-5 emotion-section">
 
 <h3 class="text-center mb-4"> ¿Cómo te sientes hoy?</h3>
@@ -288,6 +339,50 @@ Selecciona una emoción
 </div>
 
 </section>
+
+<!-- Dashboard-->
+       <section class="container mt-5 habits-section">
+
+  <h3 class="text-center mb-4"> Dashboard de Micro-hábitos</h3>
+
+  <div class="habits-grid">
+
+    <!-- Pausas activas -->
+    <div class="habit-card">
+      <h5> Pausas activas</h5>
+      <p>Muévete y estira tu cuerpo</p>
+      <button onclick="registrarHabito('pausa')">✔ Completar</button>
+      <span id="pausaCount">0</span>
+    </div>
+
+    <!-- Respiración -->
+    <div class="habit-card">
+      <h5> Respiración</h5>
+      <p>Reduce el estrés en minutos</p>
+      <button onclick="registrarHabito('respiracion')">✔ Completar</button>
+      <span id="respiracionCount">0</span>
+    </div>
+
+    <!-- Salud mental -->
+    <div class="habit-card">
+      <h5> Salud mental</h5>
+      <p>Tómate un momento para ti</p>
+      <button onclick="registrarHabito('mental')">✔ Completar</button>
+      <span id="mentalCount">0</span>
+    </div>
+
+  </div>
+
+  <!-- NIVEL DE ESTRÉS -->
+  <div class="stress-box mt-4 text-center">
+    <h5>Nivel de estrés detectado</h5>
+    <p id="stressNivel">--</p>
+    <div id="recomendacion"></div>
+  </div>
+
+</section>
+
+
 
 <!-- ================= FORMULARIO ================= -->
 <section class="container mt-5 contact-section">
@@ -372,6 +467,27 @@ Hola 👋 ¿Cómo te sientes hoy?
 
 </div>
 
+<div class="lyra-access mt-5 text-center">
+
+  <h4 class="mb-3">Acceso rápido a Lyra</h4>
+  <p class="mb-4">Conecta de inmediato con apoyo emocional</p>
+
+  <div class="lyra-buttons">
+
+    <!-- CHAT -->
+    <a href="https://wa.me/51999999999" target="_blank" class="lyra-btn chat-btn">
+    💬 Chatear por WhatsApp
+    </a>
+
+    <!-- LLAMADA -->
+    <a href="tel:+5116250840" class="lyra-btn call-btn">
+      📞 Asesoría telefónica
+    </a>
+
+  </div>
+
+</div>
+
 <!-- FOOTER -->
 <footer class="footer text-center">
 
@@ -416,7 +532,9 @@ Cuidando tu bienestar emocional todos los días
 <script src="js/script.js"></script>
 <script src="js/chatbot.js"></script>
 <script src="js/app.js"></script>
-<script src="js/firebase.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module" src="js/emociones.js"></script>
+<script type="module" src="js/firebase.js"></script>
 <script src="components/Search.js"></script>
 </body>
 </html>

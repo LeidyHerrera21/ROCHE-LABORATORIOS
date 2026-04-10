@@ -107,3 +107,64 @@ emotions.forEach(card => {
 
 });
 
+document.querySelector(".chat-btn").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  alert("Conectando con asesor emocional... 💬");
+
+  // aquí puedes redirigir a un chat real
+  // window.location.href = "chat.html";
+});
+
+//Whole //
+
+function scrollCarousel(direction) {
+  const container = document.getElementById("carousel");
+  const scrollAmount = 300;
+
+  container.scrollBy({
+    left: direction * scrollAmount,
+    behavior: "smooth"
+  });
+}
+
+
+//Dashboard//
+let habitos = {
+  pausa: 0,
+  respiracion: 0,
+  mental: 0
+};
+
+function registrarHabito(tipo){
+
+  habitos[tipo]++;
+
+  document.getElementById(tipo + "Count").textContent = habitos[tipo];
+
+  evaluarEstres();
+}
+
+function evaluarEstres(){
+
+  const total = habitos.pausa + habitos.respiracion + habitos.mental;
+
+  let nivel = "";
+  let consejo = "";
+
+  if(total <= 2){
+    nivel = "🔴 Alto";
+    consejo = "Te recomendamos hacer ejercicios de respiración y tomar una pausa.";
+  }
+  else if(total <= 5){
+    nivel = "🟡 Medio";
+    consejo = "Vas bien, intenta mantener el equilibrio.";
+  }
+  else{
+    nivel = "🟢 Bajo";
+    consejo = "Excelente, sigue cuidando tu bienestar.";
+  }
+
+  document.getElementById("stressNivel").textContent = nivel;
+  document.getElementById("recomendacion").textContent = consejo;
+}

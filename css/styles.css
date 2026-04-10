@@ -1048,3 +1048,246 @@ body{
  opacity:0;
  transition:.4s;
 }
+
+/*LYRA*/
+
+.lyra-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.lyra-btn {
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.chat-btn {
+  background: #0d6efd;
+  color: white;
+}
+
+.call-btn {
+  background: #28a745;
+  color: white;
+}
+
+.lyra-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/*Whole*/
+/* CONTENEDOR EN FILA DE 3 */
+.ws-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px; /* 🔥 aumenta espacio entre cuadros */
+  padding: 20px; /* 🔥 separa del borde del contenedor */
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .ws-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .ws-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CARD */
+.ws-card {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* IMAGEN */
+.ws-img {
+  width: 100%;
+  height: 200px; /* 🔥 tamaño uniforme */
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+/* OVERLAY */
+.ws-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  color: white;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.3),
+    transparent
+  );
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+
+/* TEXTO */
+.ws-overlay h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ED4A0D;
+}
+
+.ws-overlay p {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* HOVER EFECTOS */
+.ws-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.ws-card:hover .ws-img {
+  transform: scale(1.1);
+}
+
+.ws-card:hover .ws-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*Dashboard*/
+
+
+/* GRID */
+.habits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.habit-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  /* sombra suave */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+
+  /* animación entrada */
+  animation: fadeUp 0.6s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* EFECTO HOVER */
+.habit-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* EFECTO BRILLO */
+.habit-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+  transition: 0.5s;
+}
+
+.habit-card:hover::before {
+  left: 100%;
+}
+
+/* TEXTOS CELESTES */
+.habit-card h5 {
+  color: #0d6efd; /* azul fuerte */
+  font-weight: bold;
+}
+
+.habit-card p {
+  color: #5bc0de; /* celeste */
+  font-size: 14px;
+}
+
+/* CONTADOR */
+.habit-card span {
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+  color: #0d6efd;
+  font-weight: bold;
+}
+
+/* BOTÓN */
+.habit-card button {
+  margin-top: 15px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #0d6efd, #5bc0de);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* BOTÓN HOVER */
+.habit-card button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(13,110,253,0.4);
+}
+
+/* CAJA DE ESTRÉS */
+.stress-box {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  animation: fadeUp 0.8s ease;
+}
+
+.stress-box h5 {
+  color: #0d6efd;
+}
+
+#stressNivel {
+  font-size: 24px;
+  font-weight: bold;
+  color: #5bc0de;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#recomendacion {
+  color: #0d6efd; /* azul */
+  font-weight: 500;
+}
