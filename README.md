@@ -13,7 +13,7 @@ Puedes ver el proyecto desplegado aquí:
 * **Tabata Naomi Navidad Tupia**
 
 > **Previsualización del Proyecto**
-> ![Previsualización del sitio web de Roche Laboratorio](./image(8).png)
+> ![Previsualización del sitio web de Roche Laboratorio](./assets/images/image(8).png)
 
 ##  Características Principales
 
