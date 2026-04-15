@@ -13,54 +13,62 @@
 </head>
 
 <body>
-
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
 
-  <div class="container">
+  <div class="container d-flex justify-content-between align-items-center">
 
-    <!-- LOGO -->
-    <a class="navbar-brand" href="#">
-      <img src="assets/images/logo.png" alt="Roche Logo" class="logo-roche">
-    </a>
+    <!-- IZQUIERDA: MENÚ + BOTONES -->
+    <div class="d-flex align-items-center gap-3">
 
-    <!-- BOTÓN HAMBURGUESA -->
-    <button class="navbar-toggler custom-toggler" type="button" id="menuBtn">
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
-    </button>
+      <!-- BOTÓN HAMBURGUESA -->
+      <button class="navbar-toggler custom-toggler" type="button" id="menuBtn">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
 
-<!-- MENÚ NORMAL (desktop) -->
-    <div class="collapse navbar-collapse justify-content-end desktop-menu">
+      <!-- MENÚ -->
+      <div class="collapse navbar-collapse desktop-menu">
+        <ul class="navbar-nav gap-lg-3">
 
-      <ul class="navbar-nav gap-lg-3">
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.roche-ccav.com/acerca-de/nuestra-historia">Historia</a>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.roche-ccav.com/acerca-de/nuestra-historia">Historia</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://careers.roche.com/es/es">Carrera</a>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="https://careers.roche.com/es/es">Carrera</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.roche.com.pe/acerca-de-roche/negocios">Negocios</a>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.roche.com.pe/acerca-de-roche/negocios">Negocios</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.roche.com.pe/contacto">Contacto</a>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.roche.com.pe/contacto">Contacto</a>
-        </li>
+        </ul>
+      </div>
 
-      </ul>
+      <!-- BOTONES (AHORA SÍ JUNTOS) -->
+      <div class="d-flex align-items-center gap-2">
+
+        <!-- DARK MODE -->
+        <button id="darkModeToggle" class="theme-toggle">
+          <span class="icon">🌙</span>
+        </button>
+
+      </div>
 
     </div>
 
+    <!-- DERECHA: LOGO -->
+    <a class="navbar-brand ms-auto" href="#">
+      <img src="assets/images/logo.png" alt="Roche Logo" class="logo-roche">
+    </a>
+
   </div>
-    <!-- 🌙 DARK MODE DENTRO DEL MENÚ -->
-      <button id="darkModeToggle" class="theme-toggle ms-lg-3">
-        <span class="icon">🌙</span>
-      </button>
+
 </nav>
 
 <!-- MENÚ LATERAL -->
@@ -256,55 +264,40 @@ Preguntas Frecuentes sobre Bienestar
 
 </div>
 </section>
+<section class="ws-section">
 
-<!-- WHOLE -->
-<div class="ws-grid">
+  <div class="ws-grid">
 
-  <!-- CARD 1 -->
-  <div class="ws-card">
-    <img src="assets/images/parenting.jpg" class="ws-img">
-    <div class="ws-overlay">
-      <h5>Parenting</h5>
-      <p>Los servicios de Parenting de Morneau Shepell 
-        (ahora parte de LifeWorks/TELUS Health) 
-        ofrecen apoyo confidencial a través de su Programa de Asistencia al Empleado (PAE). 
-        Incluyen asesoramiento experto, recursos para el cuidado infantil, artículos educativos y 
-        consulta de especialistas 24/7 para mejorar las habilidades de crianza y
-         resolver desafíos familiares.</p>
+    <!-- CARD 1 -->
+    <div class="ws-card">
+      <img src="assets/images/parenting.jpg" class="ws-img" alt="Parenting">
+      <div class="ws-overlay">
+        <h5>Parenting</h5>
+        <p>Los servicios de Parenting de Morneau Shepell (ahora parte de LifeWorks/TELUS Health) ofrecen apoyo confidencial...</p>
+      </div>
     </div>
+
+    <!-- CARD 2 -->
+    <div class="ws-card">
+      <img src="assets/images/finanzas.jpg" class="ws-img" alt="Finanzas">
+      <div class="ws-overlay">
+        <h5>Finanzas</h5>
+        <p>Morneau Shepell, ahora parte de TELUS Health, ofrece servicios financieros integrados dentro de sus programas...</p>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="ws-card">
+      <img src="assets/images/abuelos.jpg" class="ws-img" alt="Adultos mayores">
+      <div class="ws-overlay">
+        <h5>Adultos mayores</h5>
+        <p>Morneau Shepell ofrece servicios de apoyo con recursos para el cuidado de adultos mayores...</p>
+      </div>
+    </div>
+
   </div>
 
-  <!-- CARD 2 -->
-  <div class="ws-card">
-    <img src="assets/images/finanzas.jpg" class="ws-img">
-    <div class="ws-overlay">
-      <h5>Finanzas</h5>
-      <p>Morneau Shepell, ahora parte de TELUS Health 
-        (anteriormente LifeWorks), 
-        ofrece servicios financieros integrados dentro de sus Programas de Asistencia al Empleado 
-        (PAE). Estos servicios incluyen asesoramiento confidencial sobre gestión financiera, 
-        planificación de jubilación, manejo de deudas
-        y apoyo para problemas financieros complejos, 
-        disponibles 24/7 de forma digital o telefónica.</p>
-    </div>
-  </div>
-
-  <!-- CARD 3 -->
-  <div class="ws-card">
-    <img src="assets/images/abuelos.jpg" class="ws-img">
-    <div class="ws-overlay">
-      <h5>Adultos mayores</h5>
-      <p>Morneau Shepell, ahora parte de LifeWorks, 
-        ofrece servicios de apoyo al empleado (PAE) 
-        que incluyen recursos de cuidado de adultos mayores, 
-        ayudando a localizar opciones de atención, 
-        asesoramiento jurídico y apoyo para el equilibrio vida-trabajo.
-         Sus servicios son confidenciales, disponibles 24/7 y gratuitos para empleados cubiertos.
-        </p>
-    </div>
-  </div>
-
-</div>
+</section>
 
 
 <!-- COMO TE SIENTES -->
@@ -519,27 +512,56 @@ Hola 👋 ¿Cómo te sientes hoy?
 
 </div>
 
-<div class="lyra-access mt-5 text-center">
+ <div class="lyra-container">
 
-  <h4 class="mb-3">Acceso rápido a Lyra</h4>
-  <p class="mb-4">Conecta de inmediato con apoyo emocional</p>
+    <!-- IZQUIERDA: BOTONES -->
+    <div class="lyra-left">
 
-  <div class="lyra-buttons">
+      <!-- WHATSAPP -->
+      <a href="https://wa.me/?text=Te%20comparto%20esta%20página:%20https://tupagina.com" 
+         target="_blank" 
+         class="lyra-btn chat-btn">
+        📤 Compartir por WhatsApp
+      </a>
 
-    <!-- CHAT -->
-    <a href="https://wa.me/51999999999" target="_blank" class="lyra-btn chat-btn">
-    💬 Chatear por WhatsApp
-    </a>
+      <!-- RECONOCIMIENTOS -->
+      <a href="reconocimientos.html" class="lyra-btn reco-btn">
+        🏆 Reconocimientos
+      </a>
 
-    <!-- LLAMADA -->
-    <a href="tel:+5116250840" class="lyra-btn call-btn">
-      📞 Asesoría telefónica
-    </a>
+    </div>
+
+
+<div class="lyra-access mt-5">
+
+  <h4 class="mb-3 text-center"></h4>
+  <p class="mb-4 text-center"></p>
+
+ 
+    <!-- DERECHA: FORMULARIO -->
+    <div class="lyra-form">
+
+      <h5>Envíanos tu consulta</h5>
+
+      <form onsubmit="enviarConsulta(event)">
+        <input type="text" id="nombre" placeholder="Tu nombre" required>
+        <input type="email" id="correo" placeholder="Tu correo" required>
+        <textarea id="pregunta" placeholder="Escribe tu pregunta..." required></textarea>
+
+        <button type="submit">Enviar consulta</button>
+      </form>
+
+      <p class="respuesta-msg">
+        Te responderemos en un plazo de 12 a 24 horas ⏱️
+      </p>
+
+      <p id="confirmacion"></p>
+
+    </div>
 
   </div>
 
 </div>
-
 <!-- FOOTER -->
 <footer class="footer text-center">
 

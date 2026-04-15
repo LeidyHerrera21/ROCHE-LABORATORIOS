@@ -107,15 +107,6 @@ emotions.forEach(card => {
 
 });
 
-document.querySelector(".chat-btn").addEventListener("click", (e) => {
-  e.preventDefault();
-
-  alert("Conectando con asesor emocional... 💬");
-
-  // aquí puedes redirigir a un chat real
-  // window.location.href = "chat.html";
-});
-
 //Whole //
 
 function scrollCarousel(direction) {
@@ -259,4 +250,28 @@ overlay.addEventListener("click", () => {
   overlay.classList.remove("active");
 });
 
+//Lyra//
 
+function enviarConsulta(e){
+  e.preventDefault();
+
+  const nombre = document.getElementById("nombre").value;
+  const correo = document.getElementById("correo").value;
+  const pregunta = document.getElementById("pregunta").value;
+  const msg = document.getElementById("confirmacion");
+
+  if(!nombre || !correo || !pregunta){
+    msg.textContent = "⚠ Completa todos los campos";
+    return;
+  }
+
+  // Simulación de envío
+  msg.textContent = "✔ Consulta enviada correctamente";
+
+  // Limpiar formulario
+  document.getElementById("nombre").value = "";
+  document.getElementById("correo").value = "";
+  document.getElementById("pregunta").value = "";
+}
+
+/*MUSICA*/
