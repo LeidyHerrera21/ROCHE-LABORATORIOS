@@ -429,6 +429,52 @@ Selecciona una emoción
 
 </section>
 
+<section class="lyra-wellness">
+
+  <h2> Tips para tu bienestar</h2>
+  <p class="wellness-subtitle">
+    Tómate un momento para relajarte y reconectar contigo 💫
+  </p>
+
+  <div class="wellness-cards">
+
+    <!-- RELAJACIÓN -->
+    <div class="wellness-card">
+      <h3>🛀 Relajación</h3>
+      <ul>
+        <li>Escucha música tranquila</li>
+        <li>Aléjate del celular por unos minutos</li>
+        <li>Estira tu cuerpo suavemente</li>
+      </ul>
+    </div>
+
+    <!-- RESPIRACIÓN -->
+    <div class="wellness-card">
+      <h3>🌬️ Respiración</h3>
+      <ul>
+        <li>Inhala profundo por 4 segundos</li>
+        <li>Sostén el aire 4 segundos</li>
+        <li>Exhala lentamente por 6 segundos</li>
+      </ul>
+    </div>
+
+    <!-- MEDITACIÓN -->
+    <div class="wellness-card">
+      <h3>🧘 Meditación</h3>
+      <ul>
+        <li>Cierra los ojos y enfócate en tu respiración</li>
+        <li>Deja pasar los pensamientos sin juzgar</li>
+        <li>Empieza con 5 minutos diarios</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
 <!-- ================= FORMULARIO ================= -->
 <section class="container mt-5 contact-section">
 
@@ -512,55 +558,47 @@ Hola 👋 ¿Cómo te sientes hoy?
 
 </div>
 
- <div class="lyra-container">
+<div class="lyra-container">
 
-    <!-- IZQUIERDA: BOTONES -->
-    <div class="lyra-left">
+  <!-- BOTONES ARRIBA -->
+  <div class="lyra-top-buttons">
 
-      <!-- WHATSAPP -->
-      <a href="https://wa.me/?text=Te%20comparto%20esta%20página:%20https://tupagina.com" 
-         target="_blank" 
-         class="lyra-btn chat-btn">
-        📤 Compartir por WhatsApp
-      </a>
+    <a href="https://wa.me/?text=Te%20comparto%20esta%20página:%20https://tupagina.com" 
+       target="_blank" 
+       class="lyra-btn chat-btn">
+      📤 Compartir por WhatsApp
+    </a>
 
-      <!-- RECONOCIMIENTOS -->
-      <a href="reconocimientos.html" class="lyra-btn reco-btn">
-        🏆 Reconocimientos
-      </a>
-
-    </div>
-
-
-<div class="lyra-access mt-5">
-
-  <h4 class="mb-3 text-center"></h4>
-  <p class="mb-4 text-center"></p>
-
- 
-    <!-- DERECHA: FORMULARIO -->
-    <div class="lyra-form">
-
-      <h5>Envíanos tu consulta</h5>
-
-      <form onsubmit="enviarConsulta(event)">
-        <input type="text" id="nombre" placeholder="Tu nombre" required>
-        <input type="email" id="correo" placeholder="Tu correo" required>
-        <textarea id="pregunta" placeholder="Escribe tu pregunta..." required></textarea>
-
-        <button type="submit">Enviar consulta</button>
-      </form>
-
-      <p class="respuesta-msg">
-        Te responderemos en un plazo de 12 a 24 horas ⏱️
-      </p>
-
-      <p id="confirmacion"></p>
-
-    </div>
+    <a href="reconocimientos.html" class="lyra-btn reco-btn">
+      🏆 Reconocimientos
+    </a>
 
   </div>
+<!-- BOTÓN -->
+<button class="open-form-btn" onclick="toggleForm()">
+  ✉️ Enviar consulta
+</button>
 
+<!-- FORMULARIO (OCULTO) -->
+<div class="lyra-form hidden" id="formularioBox">
+
+  <h5>Envíanos tu consulta</h5>
+
+  <form onsubmit="enviarConsulta(event)">
+    <input type="text" id="nombre" placeholder="Tu nombre" required>
+    <input type="email" id="correo" placeholder="Tu correo" required>
+    <textarea id="pregunta" placeholder="Escribe tu pregunta..." required></textarea>
+
+    <button type="submit">Enviar consulta</button>
+  </form>
+
+  <p class="respuesta-msg">
+    Te responderemos en un plazo de 12 a 24 horas ⏱️
+  </p>
+
+  <p id="confirmacion"></p>
+
+</div>
 </div>
 <!-- FOOTER -->
 <footer class="footer text-center">

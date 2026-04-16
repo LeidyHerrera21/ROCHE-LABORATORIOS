@@ -185,8 +185,6 @@ const retos = [
 
 function iniciarReto(){
 
-  clearInterval(intervalo);
-
  clearInterval(intervalo);
 
 // elegir reto aleatorio
@@ -274,4 +272,8 @@ function enviarConsulta(e){
   document.getElementById("pregunta").value = "";
 }
 
-/*MUSICA*/
+function toggleForm() {
+  const form = document.getElementById("formularioBox");
+  form.classList.toggle("hidden");
+}
+

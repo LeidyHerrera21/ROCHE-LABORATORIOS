@@ -1235,205 +1235,162 @@ body{
 }
 
 /*LYRA*/
-.lyra-access{
-  padding:60px 20px;
+/* CONTENEDOR GENERAL */
+.lyra-container {
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.lyra-buttons{
-  margin-bottom:30px;
+/* BOTONES SUPERIORES */
+.lyra-top-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
 }
 
-.lyra-btn{
-  display:inline-block;
-  padding:12px 20px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:600;
-  color:white;
-  transition:0.3s;
+.lyra-btn {
+  flex: 1;
+  text-align: center;
+  padding: 12px 10px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.chat-btn{
-  background:#25D366;
+/* BOTÓN WHATSAPP */
+.chat-btn {
+  background: linear-gradient(135deg, #25D366, #1ebe5d);
 }
 
-.chat-btn:hover{
-  background:#1ebe5d;
-  transform:scale(1.05);
+/* BOTÓN RECONOCIMIENTOS */
+.reco-btn {
+  background: linear-gradient(135deg, #6c5ce7, #8e7cff);
+}
+
+/* HOVER BOTONES */
+.lyra-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
 }
 
 /* FORMULARIO */
-/* CONTENEDOR */
-.lyra-form{
-  max-width:420px;
-  margin:40px auto;
-  padding:30px;
-
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(20px);
-
-  border-radius:20px;
-  border:1px solid rgba(255,255,255,0.2);
-
-  color:white;
-  box-shadow:0 15px 50px rgba(0,0,0,0.4);
-
-  text-align:center;
+.lyra-form {
+  background: #1f1f2e;
+  padding: 25px;
+  border-radius: 18px;
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
 /* TÍTULO */
-.lyra-form h5{
-  margin-bottom:15px;
-  font-size:20px;
-  font-weight:600;
-  color: #004c99;
+.lyra-form h5 {
+  margin-bottom: 18px;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 /* INPUTS Y TEXTAREA */
 .lyra-form input,
-.lyra-form textarea{
-  width:100%;
-  padding:12px 14px;
-  margin:10px 0;
-
-  border-radius:12px;
-  border:none;
-  outline:none;
-
-  font-size:14px;
-
-  background: rgba(255,255,255,0.9);
-  transition:0.3s;
+.lyra-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  background: #2b2b3d;
+  color: white;
+  transition: 0.2s;
 }
 
 /* EFECTO FOCUS */
 .lyra-form input:focus,
-.lyra-form textarea:focus{
-  box-shadow:0 0 0 2px #00AEEF;
-  transform:scale(1.02);
+.lyra-form textarea:focus {
+  background: #34344a;
+  box-shadow: 0 0 0 2px #6c5ce7;
 }
 
 /* TEXTAREA */
-.lyra-form textarea{
-  min-height:110px;
-  resize:none;
+.lyra-form textarea {
+  resize: none;
+  height: 110px;
 }
 
-/* BOTÓN */
-.lyra-form button{
-  width:100%;
-  padding:12px;
-
-  border:none;
-  border-radius:12px;
-
-  background: linear-gradient(135deg, #00AEEF, #0066CC);
-  color:white;
-  font-weight:600;
-  font-size:15px;
-
-  cursor:pointer;
-  transition:0.3s;
+/* BOTÓN ENVIAR */
+.lyra-form button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00b894, #00cec9);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
 /* HOVER BOTÓN */
-.lyra-form button:hover{
-  transform:scale(1.05);
-  box-shadow:0 5px 20px rgba(0,174,239,0.6);
+.lyra-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
-
-.lyra-container{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:25px; /* 🔥 antes estaba muy grande (60px o más) */
-}
-
-/* COLUMNA IZQUIERDA (BOTONES) */
-.lyra-left{
-  display:flex;
-  flex-direction:column;
-  justify-content:center; /* centra vertical */
-  align-items:center;     /* 🔥 centra horizontal */
-  gap:15px;
-  min-width:250px;
-}
-
-.lyra-container{ gap: 20px; }
-.lyra-left{ align-items: flex-end; }
-
-/* BOTONES */
-.lyra-btn{
-  width:220px;
-  text-align:center;
-  padding:12px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:600;
-  color:white;
-  transition:0.3s;
-}
-
-/* WHATSAPP */
-.chat-btn{
-  background:#25D366;
-}
-
-.chat-btn:hover{
-  background:#1ebe5d;
-  transform:scale(1.05);
-}
-
-/* RECONOCIMIENTOS */
-.reco-btn{
-  background:linear-gradient(135deg, #FFD700, #FFA500);
-  color:#333;
-}
-
-.reco-btn:hover{
-  transform:scale(1.05);
-  box-shadow:0 5px 15px rgba(255,165,0,0.6);
-}
-
-/* FORMULARIO */
-.lyra-form{
-  max-width:420px;
-  width:100%;
-}
-
-
-/* RESPONSIVE */
-@media(max-width:768px){
-  .lyra-container{
-    flex-direction:column;
-  }
-}
-
 
 /* MENSAJE */
-.respuesta-msg{
-  margin-top:12px;
-  font-size:13px;
-  opacity:0.85;
+.respuesta-msg {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-top: 12px;
+  text-align: center;
 }
 
 /* CONFIRMACIÓN */
-#confirmacion{
-  margin-top:10px;
-  font-size:14px;
-  color:#aaffcc;
+#confirmacion {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #00cec9;
 }
 
-.respuesta-msg{
-  font-size:13px;
-  margin-top:10px;
-  opacity:0.8;
+/* BOTÓN */
+.open-form-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #6c5ce7, #8e7cff);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s;
 }
 
-#confirmacion{
-  margin-top:10px;
-  font-size:14px;
-  color:#aaffcc;
+.open-form-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* OCULTO */
+.hidden {
+  display: none;
+}
+
+/* RESPONSIVE (CELULAR) */
+@media (max-width: 480px) {
+  .lyra-top-buttons {
+    flex-direction: column;
+  }
+
+  .lyra-btn {
+    width: 100%;
+  }
 }
 
 /*Whole*/
@@ -2104,136 +2061,6 @@ BOTON VOLVER*/
   color:#0ea5e9;
 }
 
-/*MUSICA*/
-.music-btn{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-
-  width:60px;
-  height:60px;
-  border:none;
-  border-radius:50%;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-size:22px;
-  color:white;
-
-  background: linear-gradient(135deg, #00AEEF, #0066CC);
-  backdrop-filter: blur(10px);
-
-  box-shadow: 
-    0 8px 25px rgba(0, 174, 239, 0.4),
-    inset 0 0 10px rgba(255,255,255,0.2);
-
-  cursor:pointer;
-  transition: all 0.3s ease;
-  z-index:999;
-}
-
-/* HOVER */
-.music-btn:hover{
-  transform:scale(1.15) rotate(8deg);
-  box-shadow: 
-    0 10px 30px rgba(0, 174, 239, 0.7),
-    inset 0 0 15px rgba(255,255,255,0.3);
-}
-
-/* CLICK */
-.music-btn:active{
-  transform:scale(0.95);
-}
-
-/* EFECTO PULSO (cuando suena música) */
-.music-btn.playing{
-  animation:pulse 1.5s infinite;
-}
-
-@keyframes pulse{
-  0%{
-    box-shadow: 0 0 0 0 rgba(0,174,239,0.6);
-  }
-  70%{
-    box-shadow: 0 0 0 15px rgba(0,174,239,0);
-  }
-  100%{
-    box-shadow: 0 0 0 0 rgba(0,174,239,0);
-  }
-}
-
-.theme-toggle,
-.music-btn,
-.btn-volver{
-  width:40px;
-  height:40px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-/* BASE (desktop) */
-.music-btn{
-  width:40px;
-  height:40px;
-  border-radius:50%;
-  border:none;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-size:18px;
-  color:white;
-
-  background: linear-gradient(135deg, #00AEEF, #0066CC);
-  box-shadow:0 4px 10px rgba(0,0,0,0.2);
-
-  cursor:pointer;
-  transition:0.3s;
-}
-
-/* HOVER (solo en desktop) */
-@media (hover:hover){
-  .music-btn:hover{
-    transform:scale(1.1);
-  }
-}
-
-/* ================= TABLET ================= */
-@media(max-width:992px){
-
-  .music-btn{
-    width:36px;
-    height:36px;
-    font-size:16px;
-  }
-
-}
-
-/* ================= CELULAR ================= */
-@media(max-width:768px){
-
-  .music-btn{
-    width:34px;
-    height:34px;
-    font-size:15px;
-  }
-
-}
-
-/* ================= CELULAR PEQUEÑO ================= */
-@media(max-width:480px){
-
-  .music-btn{
-    width:32px;
-    height:32px;
-    font-size:14px;
-  }
-
-}
 
 /* TABLET */
 @media(max-width:992px){
@@ -2269,5 +2096,61 @@ BOTON VOLVER*/
     padding:10px;
   }
 
+}
+
+.lyra-wellness {
+  margin-top: 50px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.lyra-wellness h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.wellness-subtitle {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  margin-bottom: 25px;
+}
+
+/* GRID DE TARJETAS */
+.wellness-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* TARJETAS */
+.wellness-card {
+  background: #1f1f2e;
+  padding: 20px;
+  border-radius: 16px;
+  color: white;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.wellness-card h3 {
+  margin-bottom: 10px;
+}
+
+.wellness-card ul {
+  padding-left: 18px;
+  font-size: 0.9rem;
+}
+
+/* HOVER */
+.wellness-card:hover {
+  transform: translateY(-5px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .wellness-cards {
+    grid-template-columns: 1fr;
+  }
 }
 
