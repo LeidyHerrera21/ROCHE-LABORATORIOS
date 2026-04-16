@@ -144,15 +144,15 @@ function evaluarEstres(){
   let consejo = "";
 
   if(total <= 2){
-    nivel = "🔴 Alto";
+    nivel = "🔴 Tu puedes sigue";
     consejo = "Te recomendamos hacer ejercicios de respiración y tomar una pausa.";
   }
   else if(total <= 5){
-    nivel = "🟡 Medio";
+    nivel = "🟡 Ya casi lo logras";
     consejo = "Vas bien, intenta mantener el equilibrio.";
   }
   else{
-    nivel = "🟢 Bajo";
+    nivel = "🟢 ¡Felicidades, Lo lograste!";
     consejo = "Excelente, sigue cuidando tu bienestar.";
   }
 
